@@ -1,0 +1,93 @@
+:root{
+  --bg: #0e172a;
+  --card: #ea590a;
+  --text: #0f1222;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --warn: #ef4444;
+  --shadow: 10px 10px 10px rgba(0,0,0,.08);
+}
+
+.app[data-theme="dark"]{
+  --bg: #40403c;
+  --card: #111626;
+  --text: #e5e7eb;
+  --muted: #9aa3b2;
+  --primary: #60a5fa;
+  --warn: #f87171;
+  --shadow: 10px 10px 10px rgba(249, 243, 243, 0.08);
+}
+
+* { 
+    box-sizing: border-box;
+ }
+
+body{
+  margin:  auto;
+  font-family:  -apple-system, "system-ui", "Segoe UI", sans-serif;
+  background: var(--bg); 
+  color: var(--text);
+  /* display: flex; */
+  /* min-height: 100vh; */
+  /* align-items: center; */
+  /* justify-content: center;  */
+}
+
+.card{
+    background-color: #f87171;
+    margin:  30px;
+
+}
+
+#header{
+    background-color: #161a33;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+div img{
+   filter: brightness(0) invert(1);
+   width: 22px;
+   height: 22px;
+
+}
+
+#header div{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+#current_page, #header div:hover{
+    background-color: #322565;
+    padding: 12px;
+    border-radius: 20px;
+}
+
+#current_page a, #header div:hover a{
+    color: #8b5cf6;
+}
+
+#current_page img, #header div:hover img{
+    filter: invert(42%) sepia(28%) saturate(7156%) hue-rotate(238deg) brightness(100%) contrast(94%)
+}
+
+
+
+
+
+
+.card div{
+    color: blue;
+    font-size: 25px;
+}
