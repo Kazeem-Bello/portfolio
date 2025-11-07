@@ -34,8 +34,9 @@ body{
 }
 
 .card{
-    background-color: #f87171;
-    margin:  30px;
+    background-color: #1a2436;
+    margin:  30px 0px 30px 0px;
+    color: #c7d0dd;
 
 }
 
@@ -51,8 +52,8 @@ body{
 
 div img{
    filter: brightness(0) invert(1);
-   width: 22px;
-   height: 22px;
+   width: 18px;
+   height: 18px;
 
 }
 
@@ -82,12 +83,41 @@ a{
     filter: invert(42%) sepia(28%) saturate(7156%) hue-rotate(238deg) brightness(100%) contrast(94%)
 }
 
+#about{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 50px;
+}
 
+aside img{
+    width: 280px;
+    height: 280px;
+    margin-left: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* border: 4px solid rgba(139, 92, 246, 0.3); */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
 
+/* aside img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
 
+main h2 {
+    font-size: 56px;
+    font-weight: 800;
+    color: #e2e8f0;
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
 
-
-.card div{
-    color: blue;
-    font-size: 25px;
+main p{
+    font-size: 18px;
+    color: #94a3b8;
+    line-height: 1.9;
+    margin-bottom: 30px;
+    text-align: justify;
 }
