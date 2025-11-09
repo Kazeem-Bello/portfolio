@@ -28,7 +28,7 @@ body{
   background: var(--bg); 
   color: var(--text);
   /* display: flex; */
-  /* min-height: 100vh; */
+  min-height: 100vh;
   /* align-items: center; */
   /* justify-content: center;  */
 }
@@ -171,7 +171,7 @@ a{
     filter: invert(42%) sepia(28%) saturate(7156%) hue-rotate(238deg) brightness(100%) contrast(94%)
 }
 
-main h2 {
+.profile-summary h2 {
     font-size: 56px;
     font-weight: 800;
     color: #e2e8f0;
@@ -179,7 +179,7 @@ main h2 {
     line-height: 1.2;
 }
 
-main p{
+.profile-summary p{
     font-size: 18px;
     color: #94a3b8;
     line-height: 1.9;
@@ -278,13 +278,228 @@ footer{
     padding: 10px;
     background: rgba(10, 14, 39, 0.6);
     border: 1px solid rgba(139, 92, 246, 0.15);
-
-    /* justify-content:center; */
-    /* align-items: center; */
 }
 
 
-/* .bring-card{
-    margin-bottom:50px;
-} */
+/* styling for the experience page */
+#education-experience{
+    text-align: center;
+    margin-bottom: 80px;
+
+}
+
+#education-experience h1{
+    font-size: 56px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #e2e8f0 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+#education-experience p{
+    font-size: 20px;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding-bottom: 10px;
+}
+
+#education-experience a{
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+#education-experience a:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+}
+
+#experience, #education, #certification{
+    margin: 0px 200px 100px 200px;
+}
+
+#experience-title h1, #education-title h1, #certification-title h1{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#experience-title i, #education-title i, #certification-title i{
+    width: 50px;
+    height: 50px;
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b5cf6;
+}
+
+.experience-card{
+    margin-bottom: 20px;
+    padding: 10px 40px;
+    background: rgba(19, 23, 41, 0.5);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.experience-card:hover{
+    border-color: rgba(139, 92, 246, 0.3);
+    transform: translateX(5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card .job-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.job-title p{
+    padding: 8px 20px;
+    background: rgba(139, 92, 246, 0.2);
+    border-radius: 50px;
+    color: #8b5cf6;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.company-name{
+    font-size: 18px;
+    color: #8b5cf6;
+    font-weight: 600;
+    margin:0px;
+}
+
+.experience-summary, .education-summary{
+    color: #94a3b8;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.experience-achievement, .education-achievement{
+    padding-bottom:20px;
+}
+
+.experience-achievement i, .education-achievement i{
+    color: #8b5cf6;
+    font-weight: bold;
+    flex-shrink: 0;
+    padding-right: 12px;
+    /* font-size: 18px; */
+}
+
+#education-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+}
+
+.education-card{
+    margin-bottom: 20px;
+    padding: 10px 40px;
+    background: rgba(19, 23, 41, 0.5);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.education-card:hover{
+    border-color: rgba(139, 92, 246, 0.3);
+    transform: translateX(5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.degree{
+    font-size: 24px;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 12px;
+}
+
+.university{
+    font-size: 20px;
+    color: #8b5cf6;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.duration-grade{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.grade, .duration{
+    padding: 6px 16px;
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 50px;
+    color: #8b5cf6;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#certification-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.certification-card{
+    /* margin-bottom: 10px; */
+    padding: 10px 20px;
+    background: rgba(19, 23, 41, 0.5);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.certification-header{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* margin-bottom: 0px; */
+    Font-size:15px;
+    Font-weight:500px;
+    Line-height:24px;
+}
+
+.certification-header i{
+    width: 40px;
+    height: 40px;
+    background: rgba(139, 92, 246, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b5cf6;
+    flex-shrink:0;
+}
+
+.certification-name{
+    padding-top:10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.certification-name p{
+    margin-top: 0px;
+    font-weight: bold;
+}
 
