@@ -321,18 +321,18 @@ footer{
     box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
 }
 
-#experience, #education, #certification{
-    margin: 0px 200px 100px 200px;
+#experience, #education, #certification, #skills{
+    margin: 0px 200px 80px 200px;
 }
 
-#experience-title h1, #education-title h1, #certification-title h1{
+#experience-title h1, #education-title h1, #certification-title h1, #skills-title h1{
     display: flex;
     align-items: center;
     gap: 15px;
     margin-bottom: 20px;
 }
 
-#experience-title i, #education-title i, #certification-title i{
+#experience-title i, #education-title i, #certification-title i, #skills-title i{
     width: 50px;
     height: 50px;
     background: rgba(139, 92, 246, 0.1);
@@ -409,7 +409,7 @@ footer{
 }
 
 .education-card{
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     padding: 10px 40px;
     background: rgba(19, 23, 41, 0.5);
     border: 1px solid rgba(139, 92, 246, 0.1);
@@ -453,13 +453,19 @@ footer{
     font-weight: 600;
 }
 
-#certification-grid{
+/* #certification-grid, #skills-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+} */
+
+#certification-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 
-.certification-card{
+.certification-card, .skills-card{
     /* margin-bottom: 10px; */
     padding: 10px 20px;
     background: rgba(19, 23, 41, 0.5);
@@ -467,6 +473,12 @@ footer{
     border-radius: 20px;
     backdrop-filter: blur(10px);
     transition: all 0.3s;
+}
+
+.certification-card:hover, .skills-card:hover{
+    border-color: rgba(139, 92, 246, 0.3);
+    transform: translateX(5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .certification-header{
@@ -503,3 +515,56 @@ footer{
     font-weight: bold;
 }
 
+ #skills-title h1{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#skills-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.skills-header{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* margin-bottom: 0px; */
+    Font-size:18px;
+    /* Font-weight:500px; */
+    font-weight: bold;
+    Line-height:24px;
+}
+
+.skills-header i{
+    width: 40px;
+    height: 40px;
+    background: rgba(139, 92, 246, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b5cf6;
+    flex-shrink:0;
+}
+
+.skills-list{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content:space-between;
+    gap: 10px;
+}
+
+.skills-list p{
+    padding: 10px 18px;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 50px;
+    color: #8b5cf6;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
