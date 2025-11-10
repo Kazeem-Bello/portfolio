@@ -49,38 +49,42 @@ body{
     font-weight: 300;
 }
 
-.header-image img{
+/* .header-image img{
    filter: brightness(0) invert(1);
    width: 18px;
    height: 18px;
 
-}
+} */
 
 #header div{
     display: flex;
     gap: 8px;
     align-items: center;
+    justify-content: center;
 }
 
 a{
     text-decoration: none;
     color: white;
+    font-size:20px;
 }
 
-
-#current_page, #header div:hover{
+/* #current_page, #header div:hover{
     background-color: #322565;
     padding: 12px;
     border-radius: 20px;
-}
+} */
 
 #current_page a, #header div:hover a{
     color: #8b5cf6;
+    background-color: #322565;
+    padding: 10px;
+    border-radius: 18px;
 }
 
-#current_page img, #header div:hover img{
+/* #current_page img, #header div:hover img{
     filter: invert(42%) sepia(28%) saturate(7156%) hue-rotate(238deg) brightness(100%) contrast(94%)
-}
+} */
 
 #about{
     display: grid;
@@ -282,13 +286,14 @@ footer{
 
 
 /* styling for the experience page */
-#education-experience{
+#education-experience, #project-intro{
     text-align: center;
     margin-bottom: 80px;
+    margin-top: 60px;
 
 }
 
-#education-experience h1{
+#education-experience h1, #project-intro h1{
     font-size: 56px;
     font-weight: 800;
     background: linear-gradient(135deg, #e2e8f0 0%, #94a3b8 100%);
@@ -296,12 +301,14 @@ footer{
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 20px;
+    /* margin-top: 20px; */
+
 }
 
-#education-experience p{
+#education-experience p, #project-intro p{
     font-size: 20px;
     color: #64748b;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto 30px;
     padding-bottom: 10px;
 }
@@ -533,7 +540,7 @@ footer{
     align-items: center;
     gap: 15px;
     /* margin-bottom: 0px; */
-    Font-size:18px;
+    Font-size:19px;
     /* Font-weight:500px; */
     font-weight: bold;
     Line-height:24px;
@@ -568,3 +575,39 @@ footer{
     font-weight: 500;
     transition: all 0.3s;
 }
+
+/* Project page styling */
+#filter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:15px;
+
+}
+
+#filter a{
+    padding: 12px 24px;
+    background: rgba(19, 23, 41, 0.5);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    text-decoration: none;
+    color: #cbd5e1;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s;
+    font-size: 14px;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+#filter a:hover{
+    border-color: rgba(139, 92, 246, 0.3);
+    background: rgba(19, 23, 41, 0.7);
+}
+
+#filter a.active{
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+    border-color: transparent;
+    color: white;
+}
+
+
