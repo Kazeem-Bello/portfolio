@@ -40,13 +40,18 @@ body{
 } */
 
 #header{
-    background-color:  rgba(10, 14, 39, 0.6);
+    background-color:  rgba(10, 14, 39, 1);
     display: flex;
     gap: 100px;
     justify-content: center;
     padding: 20px;
     font-size: 16px;
     font-weight: 300;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top:0;
+    left:0;
 }
 
 /* .header-image img{
@@ -85,6 +90,10 @@ a{
 /* #current_page img, #header div:hover img{
     filter: invert(42%) sepia(28%) saturate(7156%) hue-rotate(238deg) brightness(100%) contrast(94%)
 } */
+
+main{
+    padding-top:50px;
+}
 
 #about{
     display: grid;
