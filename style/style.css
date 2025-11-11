@@ -27,7 +27,6 @@ body {
     font-family: -apple-system, "system-ui", "Segoe UI", sans-serif;
     background: var(--bg);
     color: var(--text);
-    /* display: flex; */
     min-height: 100vh;
     /* align-items: center; */
     /* justify-content: center;  */
@@ -68,7 +67,7 @@ body {
     justify-content: center;
 }
 
-a {
+.header-image a {
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -109,7 +108,7 @@ main {
     margin-left: 30px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4); */
 }
 
 /* #profile-pic img {
@@ -189,7 +188,7 @@ main {
     font-size: 56px;
     font-weight: 800;
     color: #e2e8f0;
-    margin-bottom: 40px;
+    margin: 0px;
     line-height: 1.2;
 }
 
@@ -783,3 +782,18 @@ footer {
 .project-link .view:hover {
     box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
 }
+
+
+/* Small devices (phones, less than 768px)
+@media (max-width: 767px) {
+  body {
+    font-size: 0.8em;
+  } */
+
+/* Small devices (phones, less than 768px) */
+/* @media (min-width: 1200px) {
+main {
+    padding-top: 100px;
+    margin: 0px 80px;
+}
+} */
