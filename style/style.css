@@ -23,7 +23,8 @@
 }
 
 body {
-    margin: auto;
+    margin: 0px;
+    padding: 0px;
     font-family: -apple-system, "system-ui", "Segoe UI", sans-serif;
     background: var(--bg);
     color: var(--text);
@@ -99,7 +100,10 @@ main {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
-    padding: 50px;
+    padding: 60px;
+    margin-top: 10px;
+
+
 }
 
 #profile-pic img {
@@ -216,19 +220,15 @@ main {
     padding: 50px;
     gap: 50px;
     color: #e2e8f0;
+    transition: all 0.3s;
 }
 
 .bring-grid {
-    padding: 40px 30px;
+    padding: 20px 20px;
     margin-top: 0px;
     background: rgba(10, 14, 39, 0.6);
     border: 1px solid rgba(139, 92, 246, 0.15);
     border-radius: 20px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: flex-start; */
-    gap: 20px;
-    transition: all 0.3s;
 }
 
 .bring-grid h2 {
@@ -241,7 +241,7 @@ main {
 
 .bring-grid img {
     filter: invert(42%) sepia(28%) saturate(7156%) hue-rotate(238deg) brightness(100%) contrast(94%);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .connect-card {
@@ -279,6 +279,7 @@ main {
     background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     color: white;
     box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+    text-decoration: none;
 }
 
 .contact:hover {
@@ -290,7 +291,9 @@ footer {
     text-align: center;
     padding: 10px;
     background: rgba(10, 14, 39, 0.6);
-    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-top: 1px solid rgba(139, 92, 246, 0.15);
+    width: 100%;
+    margin: 0px;
 }
 
 
@@ -344,7 +347,7 @@ footer {
 #education,
 #certification,
 #skills {
-    margin: 0px 200px 80px 200px;
+    margin: 0px 150px 80px 150px;
 }
 
 #experience-title h1,
@@ -486,20 +489,19 @@ footer {
     font-weight: 600;
 }
 
-/* #certification-grid, #skills-grid{
+#certification-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-} */
-
-#certification-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
 }
 
-.certification-card,
-.skills-card {
+/* #certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; 
+}  */
+
+.certification-card {
     /* margin-bottom: 10px; */
     padding: 10px 20px;
     background: rgba(19, 23, 41, 0.5);
@@ -513,7 +515,7 @@ footer {
 .skills-card:hover {
     border-color: rgba(139, 92, 246, 0.3);
     transform: translateX(5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); */
 }
 
 .certification-header {
@@ -550,6 +552,22 @@ footer {
     font-weight: bold;
 }
 
+#skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px 80px;
+}
+
+.skills-card {
+    /* margin-bottom: 10px; */
+    padding: 10px 20px;
+    background: rgba(19, 23, 41, 0.5);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
 #skills-title h1 {
     display: flex;
     align-items: center;
@@ -557,20 +575,14 @@ footer {
     margin-bottom: 20px;
 }
 
-#skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
 .skills-header {
     display: flex;
     align-items: center;
     gap: 15px;
-    /* margin-bottom: 0px; */
     Font-size: 19px;
+    width: 100%;
     /* Font-weight:500px; */
-    font-weight: bold;
+    /* font-weight: bold; */
     Line-height: 24px;
 }
 
@@ -588,20 +600,19 @@ footer {
 
 .skills-list {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 10px;
 }
 
 .skills-list p {
-    padding: 10px 18px;
+    padding: 10px 10px;
     background: rgba(139, 92, 246, 0.1);
     border: 1px solid rgba(139, 92, 246, 0.3);
     border-radius: 50px;
     color: #8b5cf6;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
-    transition: all 0.3s;
 }
 
 /* Project page styling */
@@ -790,10 +801,9 @@ footer {
     font-size: 0.8em;
   } */
 
-/* Small devices (phones, less than 768px) */
-/* @media (min-width: 1200px) {
+/* Small devices (phones, less than 768px)  */
+/* @media (min-width: 768px) {
 main {
-    padding-top: 100px;
-    margin: 0px 80px;
+    margin: 1000px 100px;
 }
 } */
