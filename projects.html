@@ -1,237 +1,270 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title> projects</title>
+  <head>
+    <title>projects</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" , content="width = device-width, initial-scale = 1.0" />
-    <script src="https://kit.fontawesome.com/680e20243e.js" crossorigin="anonymous"></script>
+    <meta
+      name="viewport"
+      ,
+      content="width = device-width, initial-scale = 1.0"
+    />
+    <script
+      src="https://kit.fontawesome.com/680e20243e.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header id="header">
-        <div class="header-image">
-            <!-- <img src="media/images/home-icon.svg" alt="home-icon" /> -->
-            <a href="index.html"> <i class="fa-regular fa-house"></i> Home </a>
-        </div>
+      <div class="header-image">
+        <!-- <img src="media/images/home-icon.svg" alt="home-icon" /> -->
+        <a href="index.html"> <i class="fa-regular fa-house"></i> Home </a>
+      </div>
 
-        <div class="header-image">
-            <!-- <img src="media/images/experience-icon.svg" alt="experience-icon" /> -->
-            <a href="experience.html"> <i class="fa-solid fa-briefcase"></i> Experience </a>
-        </div>
-        <div class="header-image" id="current_page">
-            <!-- <img src="media/images/project-icon.svg" alt="project-icon" /> -->
-            <a href="projects.html"> <i class="fa-regular fa-folder-open"></i> Projects </a>
-        </div>
+      <div class="header-image">
+        <!-- <img src="media/images/experience-icon.svg" alt="experience-icon" /> -->
+        <a href="experience.html">
+          <i class="fa-solid fa-briefcase"></i> Experience
+        </a>
+      </div>
+      <div class="header-image" id="current_page">
+        <!-- <img src="media/images/project-icon.svg" alt="project-icon" /> -->
+        <a href="projects.html">
+          <i class="fa-regular fa-folder-open"></i> Projects
+        </a>
+      </div>
     </header>
     <main>
-        <section id="project-intro">
-            <h1> Featured Projects </h1>
-            <p>A collection of data science and machine learning projects showcasing <br /> real-world impact and
-                technical excellencee</p>
-            <div id="filter">
-                <button class="filter-btn active" category="all"> All Projects</button>
-                <button class="filter-btn " category="ml"> Machine Learning</button>
-                <button class="filter-btn" category="nlp"> NLP</button>
-                <button class="filter-btn" category="cv"> Computer Vision</button>
-                <button class="filter-btn" category="ds"> Data Science</button>
-                <button class="filter-btn" category="oth"> Others</button>
+      <section id="project-intro">
+        <h1>Featured Projects</h1>
+        <p>
+          A collection of data science and machine learning projects showcasing
+          <br />
+          real-world impact and technical excellencee
+        </p>
+        <div id="filter">
+          <button class="filter-btn active" category="all">All Projects</button>
+          <button class="filter-btn" category="ml">Machine Learning</button>
+          <button class="filter-btn" category="nlp">NLP</button>
+          <button class="filter-btn" category="cv">Computer Vision</button>
+          <button class="filter-btn" category="ds">Data Science</button>
+          <button class="filter-btn" category="oth">Others</button>
+        </div>
+      </section>
+      <section id="project-grid">
+        <div class="project-card" category="ml">
+          <div class="project-thumbnail">
+            <img
+              src="media/images/chrome-plugin thumbnail.jpeg"
+              alt="chrome-thumbnail"
+            />
+          </div>
+          <p class="project-category">machine learning</p>
+          <div class="project-body">
+            <h2 class="project-title">Customer Churn Prediction System</h2>
+            <p class="project-decription">
+              Built an end-to-end machine learning pipeline to predict customer
+              churn with 92% accuracy. Deployed on AWS SageMaker with real-time
+              inference capabilities serving predictions to 1M+ users.
+            </p>
+            <div class="project-stack">
+              <p>Python</p>
+              <p>GCP</p>
+              <p>Docker</p>
+              <p>Kubernetes</p>
+              <p>MLflow</p>
             </div>
-        </section>
-        <section id="project-grid">
-            <div class="project-card" category="ml">
-                <div class="project-thumbnail">
-                    <img src="media/images/chrome-plugin thumbnail.jpeg" alt="chrome-thumbnail" />
-                </div>
-                <p class="project-category"> machine learning</p>
-                <div class="project-body">
-                    <h2 class="project-title"> Customer Churn Prediction System </h2>
-                    <p class="project-decription">Built an end-to-end machine learning pipeline to predict customer
-                        churn with 92% accuracy.
-                        Deployed on AWS SageMaker with real-time inference capabilities serving predictions to 1M+
-                        users.</p>
-                    <div class="project-stack">
-                        <p> Python</p>
-                        <p> GCP </p>
-                        <p> Docker </p>
-                        <p>Kubernetes</p>
-                        <P>MLflow</P>
-                    </div>
-                    <div class="project-metrics">
-                        <p> <i class="fa-solid fa-chart-line"></i> 92% Prediction Accuracy</p>
-                        <p> <i class="fa-solid fa-chart-line"></i> 85% Precision Score </p>
-                        <p> <i class="fa-solid fa-chart-line"></i> 25% Churn Reduction </p>
-                        <p><i class="fa-solid fa-chart-line"></i> Real-time predictions</p>
-                    </div>
-                    <div class="project-link">
-                        <a href="#" class="code"> <i class="fa-solid fa-code"></i> Code</a>
-                        <a href="#" class="view"> <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
-                        </a>
-                    </div>
-                </div>
+            <div class="project-link">
+              <a href="#" class="code" target="_blank">
+                <i class="fa-solid fa-code"></i> Code</a
+              >
+              <a href="#" class="view" target="_blank">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                Project
+              </a>
             </div>
-            <div class="project-card" category="nlp">
-                <div class="project-thumbnail">
-                    <img src="media/images/chrome-plugin thumbnail.jpeg" alt="chrome-thumbnail" />
-                </div>
-                <p class="project-category"> nlp</p>
-                <div class="project-body">
-                    <h2 class="project-title"> Customer Churn Prediction System </h2>
-                    <p class="project-decription">Built an end-to-end machine learning pipeline to predict customer
-                        churn with 92% accuracy.
-                        Deployed on AWS SageMaker with real-time inference capabilities serving predictions to 1M+
-                        users.</p>
-                    <div class="project-stack">
-                        <p> Python</p>
-                        <p> GCP </p>
-                        <p> Docker </p>
-                        <p>Kubernetes</p>
-                        <P>MLflow</P>
-                    </div>
-                    <div class="project-metrics">
-                        <p> <i class="fa-solid fa-chart-line"></i> 92% Prediction Accuracy</p>
-                        <p> <i class="fa-solid fa-chart-line"></i> 85% Precision Score </p>
-                        <p> <i class="fa-solid fa-chart-line"></i> 25% Churn Reduction </p>
-                        <p><i class="fa-solid fa-chart-line"></i> Real-time predictions</p>
-                    </div>
-                    <div class="project-link">
-                        <a href="#" class="code"> <i class="fa-solid fa-code"></i> Code</a>
-                        <a href="#" class="view"> <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
-                        </a>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="project-card" category="nlp">
+          <div class="project-thumbnail">
+            <img
+              src="media/images/chrome-plugin thumbnail.jpeg"
+              alt="chrome-thumbnail"
+            />
+          </div>
+          <p class="project-category">nlp</p>
+          <div class="project-body">
+            <h2 class="project-title">Customer Churn Prediction System</h2>
+            <p class="project-decription">
+              Built an end-to-end machine learning pipeline to predict customer
+              churn with 92% accuracy. Deployed on AWS SageMaker with real-time
+              inference capabilities serving predictions to 1M+ users.
+            </p>
+            <div class="project-stack">
+              <p>Python</p>
+              <p>GCP</p>
+              <p>Docker</p>
+              <p>Kubernetes</p>
+              <p>MLflow</p>
             </div>
-            <div class="project-card" category="cv">
-                <div class="project-thumbnail">
-                    <img src="media/images/chrome-plugin thumbnail.jpeg" alt="chrome-thumbnail" />
-                </div>
-                <p class="project-category"> computer vision</p>
-                <div class="project-body">
-                    <h2 class="project-title"> Customer Churn Prediction System </h2>
-                    <p class="project-decription">Built an end-to-end machine learning pipeline to predict customer
-                        churn with 92% accuracy.
-                        Deployed on AWS SageMaker with real-time inference capabilities serving predictions to 1M+
-                        users.</p>
-                    <div class="project-stack">
-                        <p> Python</p>
-                        <p> GCP </p>
-                        <p> Docker </p>
-                        <p>Kubernetes</p>
-                        <P>MLflow</P>
-                    </div>
-                    <div class="project-metrics">
-                        <p> <i class="fa-solid fa-chart-line"></i> 92% Prediction Accuracy</p>
-                        <p> <i class="fa-solid fa-chart-line"></i> 85% Precision Score </p>
-                        <p> <i class="fa-solid fa-chart-line"></i> 25% Churn Reduction </p>
-                        <p><i class="fa-solid fa-chart-line"></i> Real-time predictions</p>
-                    </div>
-                    <div class="project-link">
-                        <a href="#" class="code"> <i class="fa-solid fa-code"></i> Code</a>
-                        <a href="#" class="view"> <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
-                        </a>
-                    </div>
-                </div>
+            <div class="project-link">
+              <a href="#" class="code" target="_blank">
+                <i class="fa-solid fa-code"></i> Code</a
+              >
+              <a href="#" class="view" target="_blank">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                Project
+              </a>
             </div>
-            <div class="project-card" category="ds">
-                <div class="project-thumbnail">
-                    <img src="media/images/chrome-plugin thumbnail.jpeg" alt="chrome-thumbnail" />
-                </div>
-                <p class="project-category"> data science</p>
-                <div class="project-body">
-                    <h2 class="project-title"> Customer Churn Prediction System </h2>
-                    <p class="project-decription">Built an end-to-end machine learning pipeline to predict customer
-                        churn with 92% accuracy.
-                        Deployed on AWS SageMaker with real-time inference capabilities serving predictions to 1M+
-                        users.</p>
-                    <div class="project-stack">
-                        <p> Python</p>
-                        <p> GCP </p>
-                        <p> Docker </p>
-                        <p>Kubernetes</p>
-                        <P>MLflow</P>
-                    </div>
-                    <div class="project-metrics">
-                        <p> <i class="fa-solid fa-chart-line"></i> 92% Prediction Accuracy</p>
-                        <p> <i class="fa-solid fa-chart-line"></i> 85% Precision Score </p>
-                        <p> <i class="fa-solid fa-chart-line"></i> 25% Churn Reduction </p>
-                        <p><i class="fa-solid fa-chart-line"></i> Real-time predictions</p>
-                    </div>
-                    <div class="project-link">
-                        <a href="#" class="code"> <i class="fa-solid fa-code"></i> Code</a>
-                        <a href="#" class="view"> <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
-                        </a>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="project-card" category="cv">
+          <div class="project-thumbnail">
+            <img
+              src="media/images/chrome-plugin thumbnail.jpeg"
+              alt="chrome-thumbnail"
+            />
+          </div>
+          <p class="project-category">computer vision</p>
+          <div class="project-body">
+            <h2 class="project-title">Customer Churn Prediction System</h2>
+            <p class="project-decription">
+              Built an end-to-end machine learning pipeline to predict customer
+              churn with 92% accuracy. Deployed on AWS SageMaker with real-time
+              inference capabilities serving predictions to 1M+ users.
+            </p>
+            <div class="project-stack">
+              <p>Python</p>
+              <p>GCP</p>
+              <p>Docker</p>
+              <p>Kubernetes</p>
+              <p>MLflow</p>
             </div>
-            <div class="project-card" category="oth">
-                <div class="project-thumbnail">
-                    <img src="media/images/chrome-plugin thumbnail.jpeg" alt="chrome-thumbnail" />
-                </div>
-                <p class="project-category"> frontend</p>
-                <div class="project-body">
-                    <h2 class="project-title"> Customer Churn Prediction System </h2>
-                    <p class="project-decription">Built an end-to-end machine learning pipeline to predict customer
-                        churn with 92% accuracy.
-                        Deployed on AWS SageMaker with real-time inference capabilities serving predictions to 1M+
-                        users.</p>
-                    <div class="project-stack">
-                        <p> Python</p>
-                        <p> GCP </p>
-                        <p> Docker </p>
-                        <p>Kubernetes</p>
-                        <P>MLflow</P>
-                    </div>
-                    <div class="project-metrics">
-                        <p> <i class="fa-solid fa-chart-line"></i> 92% Prediction Accuracy</p>
-                        <p> <i class="fa-solid fa-chart-line"></i> 85% Precision Score </p>
-                        <p> <i class="fa-solid fa-chart-line"></i> 25% Churn Reduction </p>
-                        <p><i class="fa-solid fa-chart-line"></i> Real-time predictions</p>
-                    </div>
-                    <div class="project-link">
-                        <a href="#" class="code"> <i class="fa-solid fa-code"></i> Code</a>
-                        <a href="#" class="view"> <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
-                        </a>
-                    </div>
-                </div>
+            <div class="project-link">
+              <a href="#" class="code" target="_blank">
+                <i class="fa-solid fa-code"></i> Code</a
+              >
+              <a href="#" class="view" target="_blank">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                Project
+              </a>
             </div>
-            <div class="project-card" category="ml">
-                <div class="project-thumbnail">
-                    <img src="media/images/chrome-plugin thumbnail.jpeg" alt="chrome-thumbnail" />
-                </div>
-                <p class="project-category"> machine learning</p>
-                <div class="project-body">
-                    <h2 class="project-title"> Customer Churn Prediction System </h2>
-                    <p class="project-decription">Built an end-to-end machine learning pipeline to predict customer
-                        churn with 92% accuracy.
-                        Deployed on AWS SageMaker with real-time inference capabilities serving predictions to 1M+
-                        users.</p>
-                    <div class="project-stack">
-                        <p> Python</p>
-                        <p> GCP </p>
-                        <p> Docker </p>
-                        <p>Kubernetes</p>
-                        <P>MLflow</P>
-                    </div>
-                    <div class="project-metrics">
-                        <p> <i class="fa-solid fa-chart-line"></i> 92% Prediction Accuracy</p>
-                        <p> <i class="fa-solid fa-chart-line"></i> 85% Precision Score </p>
-                        <p> <i class="fa-solid fa-chart-line"></i> 25% Churn Reduction </p>
-                        <p><i class="fa-solid fa-chart-line"></i> Real-time predictions</p>
-                    </div>
-                    <div class="project-link">
-                        <a href="#" class="code"> <i class="fa-solid fa-code"></i> Code</a>
-                        <a href="#" class="view"> <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
-                        </a>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="project-card" category="ds">
+          <div class="project-thumbnail">
+            <img
+              src="media/images/chrome-plugin thumbnail.jpeg"
+              alt="chrome-thumbnail"
+            />
+          </div>
+          <p class="project-category">data science</p>
+          <div class="project-body">
+            <h2 class="project-title">Customer Churn Prediction System</h2>
+            <p class="project-decription">
+              Built an end-to-end machine learning pipeline to predict customer
+              churn with 92% accuracy. Deployed on AWS SageMaker with real-time
+              inference capabilities serving predictions to 1M+ users.
+            </p>
+            <div class="project-stack">
+              <p>Python</p>
+              <p>GCP</p>
+              <p>Docker</p>
+              <p>Kubernetes</p>
+              <p>MLflow</p>
             </div>
-        </section>
+            <div class="project-link">
+              <a href="#" class="code" target="_blank">
+                <i class="fa-solid fa-code"></i> Code</a
+              >
+              <a href="#" class="view" target="_blank">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                Project
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" category="oth">
+          <div class="project-thumbnail">
+            <img
+              src="media/images/uk-censor.png"
+              alt="chrome-thumbnail"
+            />
+          </div>
+          <p class="project-category">frontend</p>
+          <div class="project-body">
+            <h2 class="project-title">Customer Churn Prediction System</h2>
+            <p class="project-decription">
+              Built an end-to-end machine learning pipeline to predict customer
+              churn with 92% accuracy. Deployed on AWS SageMaker with real-time
+              inference capabilities serving predictions to 1M+ users.
+            </p>
+            <div class="project-stack">
+              <p>Python</p>
+              <p>GCP</p>
+              <p>Docker</p>
+              <p>Kubernetes</p>
+              <p>MLflow</p>
+            </div>
+            <div class="project-link">
+              <a href="#" class="code" target="_blank">
+                <i class="fa-solid fa-code"></i> Code</a
+              >
+              <a href="#" class="view" target="_blank">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                Project
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" category="oth">
+          <div class="project-thumbnail">
+            <img
+              src="media/images/image.png"
+              alt="chrome-thumbnail"
+            />
+          </div>
+          <p class="project-category">data analysis</p>
+          <div class="project-body">
+            <h2 class="project-title">UK Censor Town Analysis</h2>
+            <p class="project-decription">
+              This project presents a comprehensive analysis of a synthetic UK
+              town using census data. The data was generated using
+              Python's Faker library and aims to simulate a real-world census
+              process as it might have been done in the UK in the 1880s.
+            </p>
+            <div class="project-stack">
+              <p>Python</p>
+              <p>Faker</p>
+              <p>Pandas</p>
+              <p>Seaborn</p>
+              <p>Matplotlib</p>
+            </div>
+            <div class="project-link">
+              <a
+                href="https://github.com/Kazeem-Bello/UK-Censor-Project"
+                class="code"
+                target="_blank"
+              >
+                <i class="fa-solid fa-code"></i> Code</a
+              >
+              <a
+                href="uk-censor-project/census_project_summary_blog.html"
+                class="view"
+                target="_blank"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="script.js"></script>
     <footer>
-        <p> © 2025 Kazeem E. Bello. Crafted with passion for innovation</p>
+      <p>© 2025 Kazeem E. Bello. Crafted with passion for innovation</p>
     </footer>
-</body>
-
+  </body>
 </html>

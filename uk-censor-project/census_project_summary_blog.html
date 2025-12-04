@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UK Census Project – Summary</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<h1>UK Census Project – Comprehensive Summary</h1>
+
+<p>
+This project presents a comprehensive analysis of a fictional UK town using synthetically generated census data. 
+Modelled after the 1881 UK census, the dataset was created using Python’s Faker library and consists of 8,485 individual records. 
+The goal is to emulate how census data can be used to guide public policy, investment, and social planning decisions through data cleaning, statistical analysis, and visual storytelling.
+</p>
+
+<h2>Data Preparation & Cleaning</h2>
+<p>
+Data cleaning addressed missing values, format inconsistencies, and incorrect inputs. Key steps included:
+<ul>
+<li>Dropping irrelevant index columns.</li>
+<li>Converting age data from text/float to integer.</li>
+<li>Inferring missing relationships and occupations using household context.</li>
+<li>Normalising gender, marital status, religion, and occupation fields.</li>
+<li>Categorising occupations into employment types for easier analysis.</li>
+<li>Removing or adjusting implausible entries (e.g. underage heads of household).</li>
+</ul>
+</p>
+
+<h2>Demographics</h2>
+<p>
+The town is dominated by a middle-aged population (20–60 years), with females slightly outnumbering males. 
+This indicates a potential ageing population crisis in the future, particularly in health and social care.
+</p>
+<img src="visualisations/population_pyramid.png" alt="Population Pyramid">
+
+<h2>Employment Trends</h2>
+<p>
+Employment levels are strong, with most residents categorised as employed or students. A derived employment category field helped segment the population 
+into employed, unemployed, students, children, and retirees. Most economically active individuals are aged 20–60.
+</p>
+<img src="visualisations/employment_status.png" alt="Employment Category Distribution">
+
+<h2>Religion</h2>
+<p>
+Roughly 33% of residents have no religion. Christianity remains the most declared religion (~23%). 
+Other affiliations, such as Islam, Sikhism, or Jediism, were minimal and normalised in the data.
+</p>
+<img src="visualisations/religion_distribution.png" alt="Religion Distribution">
+
+<h2>Marital Status by Age</h2>
+<p>
+Marriage, divorce, and widowhood span across all age groups, with a larger number of widowed individuals in older age bands. 
+There are more divorced females than males, likely indicating gendered social trends.
+</p>
+<img src="visualisations/marital_status_by_age.png" alt="Marital Status by Age">
+
+<h2>Commuting and Migration</h2>
+<p>
+Around 43% of residents are estimated to commute out of the town regularly—mostly university students and working professionals. 
+Estimated immigration and emigration rates (46.69 and 21.9 per 1,000 respectively) suggest a modest population growth of 19.2 per 1,000 households.
+</p>
+
+<h2>Housing Occupancy</h2>
+<p>
+Analysis of occupancy across 2,819 households showed several homes under-utilised, indicating low demand for new housing development. 
+Instead, improving use of existing housing stock is recommended.
+</p>
+<img src="visualisations/housing_occupancy.png" alt="Housing Occupancy">
+
+<h2>Strategic Recommendations</h2>
+<ul>
+<li>Create more local employment opportunities (e.g. manufacturing).</li>
+<li>Improve transport infrastructure (consider a train station).</li>
+<li>Expand or prepare healthcare services for ageing residents.</li>
+<li>Avoid building new houses; repurpose underutilised ones.</li>
+<li>Build one additional Christian place of worship to reflect religious spread.</li>
+<li>Support community education and training for the unemployed.</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+This project demonstrates how synthetic data can simulate real-world census analysis. 
+With proper data cleaning and visualisation, valuable insights were derived to guide urban planning, social infrastructure, and investment decisions.
+</p>
+
+</body>
+</html>

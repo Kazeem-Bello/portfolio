@@ -1,0 +1,30 @@
+:root {
+    --bg: #0e172a;
+    --card: #ea590a;
+    --text: #e5e7eb;
+    --muted: #6b7280;
+    --primary: #2563eb;
+    --warn: #ef4444;
+    --shadow: 10px 10px 10px rgba(0, 0, 0, .08);
+}
+
+body { 
+    font-family: -apple-system, "system-ui", "Segoe UI", sans-serif;
+    line-height: 1.6; 
+    max-width: 900px;
+    margin: auto; 
+    padding: 20px; 
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+        
+img { 
+    width: 100%; 
+    margin: 20px 0; 
+    border: 1px solid #ccc; 
+}
+        
+p { 
+    margin-bottom: 15px; 
+}
