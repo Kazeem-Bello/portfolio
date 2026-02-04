@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITV-challenge</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <section>
+  <div >
+    <h1>
+    A Spy Among Friends: Predicting Viewer Engagement for ITVX Series
+    </h1>
+    <p>
+      This project was developed as part of the <strong>ITV Data Science Challenge</strong>, focused on predicting how likely a user is to watch 
+      the ITVX exclusive series <em>“A Spy Among Friends.”</em> It explores user viewing behaviour, identifies engagement drivers, and develops 
+      machine learning models to support data-driven marketing and recommendation strategies.
+    </p>
+
+    <a href="#video" id = "video-link">Watch Detailed Explanation </a>
+
+    <h2 id = "objectives">Objectives</h2>
+    <ul>
+      <li>Analyse user behaviour patterns through exploratory data analysis (EDA).</li>
+      <li>Identify key factors influencing viewer engagement.</li>
+      <li>Develop machine learning models to predict viewing probability.</li>
+      <li>Provide actionable insights for ITV's marketing and content strategy teams.</li>
+    </ul>
+
+    <h2>Dataset</h2>
+    <p>
+      The dataset contained anonymised viewing information such as the number of episodes watched, 
+      unique programmes, favourite genres and channels, and session frequency. Data cleaning, EDA, and modelling were conducted using Python, Pandas, and Scikit-learn.
+    </p>
+    <img src="visuals/datainfo.png" alt="Data information"/>
+
+
+    <h2>Key Insights</h2>
+    <div>
+      <h3>Genre Popularity</h3>
+      <img src="visuals/genre.png" alt="Genre Popularity Chart"/>
+    </div>
+
+    <div>
+      <h3>Channel Distribution</h3>
+      <img src="visuals/channel.png" alt="Channel Distribution Chart">
+    </div>
+
+    <div>
+      <h3>Most Watched Platform</h3>
+      <img src="visuals/platform.png" alt="Platform Distribution Chart">
+    </div>
+
+    <h2>Model Development</h2>
+    <p>
+      Three machine learning models—Decision Tree, Random Forest, and XGBoost—were developed to predict user engagement. 
+      After evaluation, <strong>XGBoost</strong> achieved the best performance with 90% accuracy, outperforming other models in precision and recall.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Model</th>
+          <th >Accuracy</th>
+          <th>Precision</th>
+          <th>Recall</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Decision Tree</td>
+          <td>0.78</td><td>0.76</td><td>0.75</td>
+        </tr>
+        <tr>
+          <td>Random Forest</td>
+          <td>0.84</td><td>0.83</td><td>0.82</td>
+        </tr>
+        <tr>
+          <td>XGBoost</td>
+          <td>0.90</td><td>0.88</td><td>0.87</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Results & Recommendations</h2>
+    <p>
+      The model identified genre preferences, channel affinity, and viewing diversity as the most influential factors in predicting engagement. 
+      These insights can help ITV's data and marketing teams personalise recommendations and improve audience targeting strategies.
+    </p>
+
+    <h2>Tools & Technologies</h2>
+      <div style="padding:52.91% 0 0 0;position:relative;" id ="video">
+        <iframe src="https://player.vimeo.com/video/1161768499?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" 
+          allow="autoplay; fullscreen; picture-in-picture; encrypted-media;" 
+          style="position:absolute;top:0;left:0;width:100%;height:100%;">
+        </iframe>
+      </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <h2>Project Deliverables</h2>
+    <ul>
+      <li><code>ITV_data_challenge.ipynb</code>-Full Jupyter Notebook</li>
+      <li><code>DIG_Step_Up_Viewing_Data_Strategy.xlsx</code>-Dataset</li>
+      <li><code>ITV_Setup_Presentation.pptx</code>-Presentation Slides</li>
+      <li><code>ITV_Challenge_Explanation.mp4</code>-Video Demonstration</li>
+    </ul>
+  </div>
+</section>
+
+</body>
+</html>
