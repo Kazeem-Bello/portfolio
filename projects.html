@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>projects</title>
@@ -49,6 +49,7 @@
           <button class="filter-btn" category="nlp">NLP</button>
           <button class="filter-btn" category="cv">Computer Vision</button>
           <button class="filter-btn" category="ds">Data Science</button>
+          <button class="filter-btn" category="cl">Cloud</button>
           <button class="filter-btn" category="oth">Others</button>
         </div>
       </section>
@@ -119,16 +120,16 @@
             </div>
           </div>
         </div>
-        <div class="project-card" category="cv">
+        <div class="project-card" category="ml">
           <div class="project-thumbnail">
             <img
               src="media/images/chrome-plugin thumbnail.jpeg"
               alt="chrome-thumbnail"
             />
           </div>
-          <p class="project-category">computer vision</p>
+          <p class="project-category">machine learning</p>
           <div class="project-body">
-            <h2 class="project-title">Customer Churn Prediction System</h2>
+            <h2 class="project-title">US Visa Approval Prediction</h2>
             <p class="project-decription">
               Built an end-to-end machine learning pipeline to predict customer
               churn with 92% accuracy. Deployed on AWS SageMaker with real-time
@@ -142,7 +143,7 @@
               <p>MLflow</p>
             </div>
             <div class="project-link">
-              <a href="#" class="code" target="_blank">
+              <a href="https://github.com/Kazeem-Bello/US-Visa-Approval-Prediction" class="code" target="_blank">
                 <i class="fa-solid fa-code"></i> Code</a
               >
               <a href="#" class="view" target="_blank">
@@ -152,33 +153,51 @@
             </div>
           </div>
         </div>
-        <div class="project-card" category="ds">
+        <div class="project-card" category="cl">
           <div class="project-thumbnail">
             <img
-              src="media/images/chrome-plugin thumbnail.jpeg"
-              alt="chrome-thumbnail"
+              src="media/images/aws.png"
+              alt="aws-thumbnail"
             />
           </div>
-          <p class="project-category">data science</p>
+          <p class="project-category">Cloud Engineering</p>
           <div class="project-body">
-            <h2 class="project-title">Customer Churn Prediction System</h2>
+            <h2 class="project-title" style="font-size: 22px">
+              Secure Web Application Deployment on AWS
+            </h2>
+            <!-- <p class="project-decription">
+              Deployed a secure, multi-tier web application on
+              AWS with private EC2 instances behind a load balancer. Automated
+              configuration management using Ansible, enforced network isolation
+              via VPC design
+            </p> -->
             <p class="project-decription">
-              Built an end-to-end machine learning pipeline to predict customer
-              churn with 92% accuracy. Deployed on AWS SageMaker with real-time
-              inference capabilities serving predictions to 1M+ users.
+              Deployed a secure web
+              application on AWS using a custom VPC with public and private
+              subnets. Automated deployment using Ansible, and configured Load
+              Balancer to distribute traffic across private EC2
             </p>
             <div class="project-stack">
-              <p>Python</p>
-              <p>GCP</p>
-              <p>Docker</p>
-              <p>Kubernetes</p>
-              <p>MLflow</p>
+              <p>AWS</p>
+              <p>Linux</p>
+              <p>Ansible</p>
+              <p>Networking</p>
+              <p>EC2</p>
+              <p>VPC</p>
             </div>
             <div class="project-link">
-              <a href="https://github.com/Kazeem-Bello/ITV-DigData-Data-Science-Challenge" class="code" target="_blank">
+              <a
+                href="https://medium.com/@bellokazeemenitan09/setting-up-a-simple-web-application-on-aws-c0bea856cdeb"
+                class="code"
+                target="_blank"
+              >
                 <i class="fa-solid fa-code"></i> Code</a
               >
-              <a href="ITV-challenge/itv-challenge.html" class="view" target="_blank">
+              <a
+                href="https://medium.com/@bellokazeemenitan09/setting-up-a-simple-web-application-on-aws-c0bea856cdeb"
+                class="view"
+                target="_blank"
+              >
                 <i class="fa-solid fa-arrow-up-right-from-square"></i> View
                 Project
               </a>
@@ -187,17 +206,18 @@
         </div>
         <div class="project-card" category="ds">
           <div class="project-thumbnail">
-            <img
-              src="media/images/uk-censor.png"
-              alt="chrome-thumbnail"
-            />
+            <img src="media/images/uk-censor.png" alt="chrome-thumbnail" />
           </div>
           <p class="project-category">Data Science</p>
           <div class="project-body">
-            <h2 class="project-title">A Spy Among Friends: Predicting Viewer Engagement for ITVX Series</h2>
+            <h2 class="project-title">
+              A Spy Among Friends: Predicting Viewer Engagement for ITVX Series
+            </h2>
             <p class="project-decription">
-             This project, part of the ITV Data Science Challenge, predicts how likely users are to watch the 
-             ITVX series “A Spy Among Friends.” It applies machine learning to support data-driven marketing decisions.
+              This project, part of the ITV Data Science Challenge, predicts how
+              likely users are to watch the ITVX series “A Spy Among Friends.”
+              It applies machine learning to support data-driven marketing
+              decisions.
             </p>
             <div class="project-stack">
               <p>Python</p>
@@ -207,31 +227,36 @@
               <p>EDA</p>
             </div>
             <div class="project-link">
-              <a href="https://github.com/Kazeem-Bello/ITV-DigData-Data-Science-Challenge" class="code" target="_blank">
+              <a
+                href="https://github.com/Kazeem-Bello/ITV-DigData-Data-Science-Challenge"
+                class="code"
+                target="_blank"
+              >
                 <i class="fa-solid fa-code"></i> Code</a
               >
-              <a href="project/ITV-challenge/itv-challenge.html" class="view" target="_blank">
+              <a
+                href="project/ITV-challenge/itv-challenge.html"
+                class="view"
+                target="_blank"
+              >
                 <i class="fa-solid fa-arrow-up-right-from-square"></i> View
                 Project
               </a>
             </div>
           </div>
         </div>
-        <div class="project-card" category="oth">
+        <div class="project-card" category="ds">
           <div class="project-thumbnail">
-            <img
-              src="media/images/image.png"
-              alt="chrome-thumbnail"
-            />
+            <img src="media/images/image.png" alt="chrome-thumbnail" />
           </div>
-          <p class="project-category">data analysis</p>
+          <p class="project-category">data science</p>
           <div class="project-body">
             <h2 class="project-title">UK Censor Town Analysis</h2>
             <p class="project-decription">
               This project presents a comprehensive analysis of a synthetic UK
-              town using census data. The data was generated using
-              Python's Faker library and aims to simulate a real-world census
-              process as it might have been done in the UK in the 1880s.
+              town using census data. The data was generated using Python's
+              Faker library and aims to simulate a real-world census process as
+              it might have been done in the UK in the 1880s.
             </p>
             <div class="project-stack">
               <p>Python</p>
