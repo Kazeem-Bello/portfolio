@@ -1,94 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>UK Census Project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
-    <script
-      src="https://kit.fontawesome.com/680e20243e.js"
-      crossorigin="anonymous"
-    ></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>US Visa Approval Prediction</title>
+  <link rel="stylesheet" href="style.css" /> 
 </head>
+
 <body>
-<a href="../../projects.html" id = "back"> <i class="fa-sharp fa-solid fa-backward"></i> Back to Projects </a>
-<h1>UK Census project</h1>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-size:14px;">US Visa Approval Prediction</div>
+          <div style="font-size:12px;color:var(--muted2);margin-top:-1px;">End-to-End MLOps Project</div>
+        </div>
+      </div>
 
-<p>
-This project presents a comprehensive analysis of a fictional UK town using synthetically generated census data. 
-Modelled after the 1881 UK census, the dataset was created using Python's Faker library and consists of 8,485 individual records. 
-The goal is to emulate how census data can be used to guide public policy, investment, and social planning decisions through data cleaning, statistical analysis, and visual storytelling.
-</p>
+      <nav class="nav" aria-label="Page navigation">
+        <a href="#overview">Overview</a>
+        <a href="#data">Data</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#training">Training</a>
+        <a href="#inference">Inference</a>
+        <a href="#video">Project Demo</a>
+      </nav>
+    </div>
+  </header>
 
-<h2>Data Preparation & Cleaning</h2>
-<p>
-Data cleaning addressed missing values, format inconsistencies, and incorrect inputs. Key steps included:
-<ul>
-<li>Dropping irrelevant index columns.</li>
-<li>Converting age data from text/float to integer.</li>
-<li>Inferring missing relationships and occupations using household context.</li>
-<li>Normalising gender, marital status, religion, and occupation fields.</li>
-<li>Categorising occupations into employment types for easier analysis.</li>
-<li>Removing or adjusting implausible entries (e.g. underage heads of household).</li>
-</ul>
-</p>
+  <main class="container">
+    <!-- HERO -->
+    <div class="hero" id="overview">
+      <div class="hero-card">
+        <div class="kicker"><span class="dot" aria-hidden="true"></span> Machine Learning • MLOps</div>
+        <h1>US Visa Approval Prediction Platform</h1>
+        <p class="subtitle">
+          A modular, production-oriented machine learning platform that predicts US visa application outcomes.
+          The system covers ingestion from MongoDB, schema validation & drift checks, preprocessing and class-imbalance handling,
+          model training and evaluation, and conditional promotion to production (S3), with a FastAPI inference layer for real-time predictions.
+        </p>
 
-<h2>Demographics</h2>
-<p>
-The town is dominated by a middle-aged population (20-60 years), with females slightly outnumbering males. 
-This indicates a potential ageing population crisis in the future, particularly in health and social care.
-</p>
-<img src="visualisations/population_pyramid.png" alt="Population Pyramid">
+        <div class="cta-row">
+          <a class="btn primary" href="#video">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 7h10v10H7V7Z" stroke="white" stroke-opacity=".85" stroke-width="1.8"/>
+              <path d="M4 12h3M17 12h3M12 4v3M12 17v3" stroke="white" stroke-opacity=".65" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            Watch Project Demo
+          </a>
+        </div>
+      </div>
 
-<h2>Employment Trends</h2>
-<p>
-Employment levels are strong, with most residents categorised as employed or students. A derived employment category field helped segment the population 
-into employed, unemployed, students, children, and retirees. Most economically active individuals are aged 20-60.
-</p>
-<img src="visualisations/employment_status.png" alt="Employment Category Distribution">
+      <div class="side">
+        <div class="stat">
+          <div class="label">Primary Goal</div>
+          <div class="value">Supervised Classification Model</div>
+          <div class="badges">
+            <span class="badge" style = "color: #22c55e;">Approved</span>
+            <span class="badge" style = "color: #ef4444;">Denied</span>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="label">Production Model Store</div>
+          <div class="value">AWS S3 (model + metrics)</div>
+          <div class="badges">
+            <span class="badge">Baseline comparison</span>
+            <span class="badge">F1-driven governance</span>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="label">Serving Layer</div>
+          <div class="value">FastAPI UI + prediction endpoint</div>
+          <div class="badges">
+            <span class="badge">Low-latency inference</span>
+            <span class="badge">No retrain on predict</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<h2>Religion</h2>
-<p>
-Roughly 33% of residents have no religion. Christianity remains the most declared religion (~23%). 
-Other affiliations, such as Islam, Sikhism, or Jediism, were minimal and normalised in the data.
-</p>
-<img src="visualisations/religion_distribution.png" alt="Religion Distribution">
+    <!-- DATA -->
+    <section id="data" class="grid">
+      <div class="card">
+        <div class="split">
+          <h2>Dataset</h2>
+          <span class="pill">Source: Kaggle → MongoDB</span>
+        </div>
+        <p>
+          The dataset includes employer characteristics and applicant attributes.
+          It contains categorical and numerical variables, with a derived feature (<code>company_age</code>) used to improve the model.
+        </p>
 
-<h2>Marital Status by Age</h2>
-<p>
-Marriage, divorce, and widowhood span across all age groups, with a larger number of widowed individuals in older age bands. 
-There are more divorced females than males, likely indicating gendered social trends.
-</p>
-<img src="visualisations/marital_status_by_age.png" alt="Marital Status by Age">
+        <div class="table-wrap" aria-label="Feature table">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>case_id</td><td><span class="tag"><span class="mini"></span>categorical</span></td><td>Unique applicant identifier</td></tr>
+              <tr><td>continent</td><td><span class="tag"><span class="mini"></span>categorical</span></td><td>Applicant continent</td></tr>
+              <tr><td>education_of_employee</td><td><span class="tag"><span class="mini"></span>categorical</span></td><td>Highest education level</td></tr>
+              <tr><td>has_job_experience</td><td><span class="tag"><span class="mini"></span>categorical</span></td><td>Job experience flag (Y/N)</td></tr>
+              <tr><td>requires_job_training</td><td><span class="tag"><span class="mini"></span>categorical</span></td><td>Training required (Y/N)</td></tr>
+              <tr><td>region_of_employment</td><td><span class="tag"><span class="mini"></span>categorical</span></td><td>US region of employment</td></tr>
+              <tr><td>unit_of_wage</td><td><span class="tag"><span class="mini"></span>categorical</span></td><td>Wage unit (Hour/Week/Month/Year)</td></tr>
+              <tr><td>full_time_position</td><td><span class="tag"><span class="mini"></span>categorical</span></td><td>Employment type (Y/N)</td></tr>
 
-<h2>Commuting and Migration</h2>
-<p>
-Around 43% of residents are estimated to commute out of the town regularly—mostly university students and working professionals. 
-Estimated immigration and emigration rates (46.69 and 21.9 per 1,000 respectively) suggest a modest population growth of 19.2 per 1,000 households.
-</p>
+              <tr><td>no_of_employees</td><td><span class="tag"><span class="mini"></span>numerical</span></td><td>Company size</td></tr>
+              <tr><td>yr_of_estab</td><td><span class="tag"><span class="mini"></span>numerical</span></td><td>Company establishment year</td></tr>
+              <tr><td>prevailing_wage</td><td><span class="tag"><span class="mini"></span>numerical</span></td><td>Salary / wage</td></tr>
 
-<h2>Housing Occupancy</h2>
-<p>
-Analysis of occupancy across 2,819 households showed several homes under-utilised, indicating low demand for new housing development. 
-Instead, improving use of existing housing stock is recommended.
-</p>
-<img src="visualisations/housing_occupancy.png" alt="Housing Occupancy">
+              <tr><td>company_age</td><td><span class="tag"><span class="mini"></span>numerical</span></td><td>Derived: current_year − yr_of_estab</td></tr>
+              <tr><td>case_status</td><td><span class="tag"><span class="mini"></span>target</span></td><td>Approved / Denied</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-<h2>Strategic Recommendations</h2>
-<ul>
-<li>Create more local employment opportunities (e.g. manufacturing).</li>
-<li>Improve transport infrastructure (consider a train station).</li>
-<li>Expand or prepare healthcare services for ageing residents.</li>
-<li>Avoid building new houses; repurpose underutilised ones.</li>
-<li>Build one additional Christian place of worship to reflect religious spread.</li>
-<li>Support community education and training for the unemployed.</li>
-</ul>
+      <div class="card">
+      <div class="card">
+        <div class="split">
+          <h2>Data Storage & Ingestion</h2>
+          <span class="pill">MongoDB • PyMongo • Pandas</span>
+        </div>
+        <p>
+          Data is stored in MongoDB as BSON documents. The ingestion component connects via PyMongo using a connection URI stored in environment
+          variables (credentials are not hardcoded). The collection is loaded into a Pandas DataFrame for downstream pipeline stages.
+        </p>
 
-<h2>Conclusion</h2>
-<p>
-This project demonstrates how synthetic data can simulate real-world census analysis. 
-With proper data cleaning and visualisation, valuable insights were derived to guide urban planning, social infrastructure, and investment decisions.
-</p>
+        <pre><code># High-level ingestion workflow
+1) MongoClient(uri_from_env)
+2) db = client[database_name]
+3) collection.find(...)
+4) DataFrame(records)
+5) Save snapshot → us_visa.csv
+6) Train/Test split → train.csv, test.csv</code></pre>
+      </div>
 
+      <div class="card">
+        <div class="split">
+          <h2>CI/CD & Automation</h2>
+          <span class="pill">MLOps Readiness</span>
+        </div>
+        <p>
+          The project is structured for automation: reproducible artifacts, automated metric logging, and conditional promotion.
+          This design supports future CI/CD integration (e.g., GitHub Actions) for consistent training, testing, and deployment.
+        </p>
+        <ul class="list">
+          <li>Automated artifact creation per pipeline stage</li>
+          <li>Metric persistence for run-to-run comparison</li>
+          <li>Promotion policy prevents model regression</li>
+          <li>Extensible for scheduled retraining and monitoring</li>
+        </ul>
+      </div>
+
+      </div>
+    </section>
+
+    <!-- PIPELINE -->
+    <section id="pipeline" class="card">
+      <div class="split">
+        <h2>Pipeline Architecture</h2>
+        <span class="pill">Artifacts • Reproducibility </span>
+      </div>
+      <p>
+        The platform follows a staged pipeline design where each component produces versioned artifacts. This supports reproducibility,
+        traceability, and controlled model promotion based on objective metrics.
+      </p>
+
+      <div class="steps" role="list" aria-label="Pipeline steps">
+        <div class="step" role="listitem">
+          <div class="n">1</div>
+          <h3>Data Ingestion</h3>
+          <p>Load from MongoDB → snapshot <code>us_visa.csv</code> → split into <code>train.csv</code>/<code>test.csv</code>.</p>
+        </div>
+        <div class="step" role="listitem">
+          <div class="n">2</div>
+          <h3>Data Validation</h3>
+          <p>Schema checks + drift reporting to detect distribution shifts that can degrade model performance using Evidently.</p>
+        </div>
+        <div class="step" role="listitem">
+          <div class="n">3</div>
+          <h3>Data Transformation</h3>
+          <p>Feature engineering, encoding, scaling, target mapping, and SMOTEENN imbalance handling. Preprocessing object saved to the artifact folder.</p>
+        </div>
+        <div class="step" role="listitem">
+          <div class="n">4</div>
+          <h3>Model Training</h3>
+          <p>Train multiple models using <a href = "https://pypi.org/project/neuro-mf/" target = "_blank" style="color: rgb(255, 196, 0);">neuro_mf</a> 
+            + GridSearchCV for hyperparameter tuning. Best model saved to artifact folder.</p>
+        </div>
+        <div class="step" role="listitem">
+          <div class="n">5</div>
+          <h3>Model Evaluation</h3>
+          <p>Compare trained model vs production baseline using F1-score; accept only if it improves.</p>
+        </div>
+        <div class="step" role="listitem">
+          <div class="n">6</div>
+          <h3>Model Pusher</h3>
+          <p>Push model artifacts to S3 when accepted (or on first run); otherwise retain production model.</p>
+        </div>
+      </div>
+
+      <pre><code>artifact/
+├── data_ingestion/
+│   ├── feature_store/
+│   │   └── us_visa.csv
+│   └── ingested/
+│       ├── train.csv
+│       └── test.csv
+├── data_validation/
+│   └── drift_report.yaml
+├── data_transformation/
+│   ├── transformed_object/
+│   │   └── preprocessing.pkl
+│   └── transformed/
+│       ├── train.npy
+│       └── test.npy
+├── model_trainer/
+│   └── trained_model.pkl
+└── metric/
+    └── metric.csv</code></pre>
+    </section>
+
+    <!-- VALIDATION + TRANSFORMATION -->
+    <section class="grid">
+      <div class="card">
+        <div class="split">
+          <h2>Data Validation</h2>
+          <span class="pill">Schema • Drift Report</span>
+        </div>
+        <p>
+          The validation stage ensures the ingested data matches expected schema (column presence, correct column counts)
+          and generates a drift report by comparing reference vs current distributions. Drift monitoring is crucial because changes
+          in feature distributions can reduce predictive quality over time.
+        </p>
+        <ul class="list">
+          <li>Column count check against schema config</li>
+          <li>Required categorical & numerical column presence</li>
+          <li>Dataset drift detection and persisted report artifact</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="split">
+          <h2>Data Transformation</h2>
+          <span class="pill">Preprocessing Object</span>
+        </div>
+        <p>
+          Transformation applies feature engineering (<code>company_age</code>), drops non-essential fields, encodes categoricals, scales numericals,
+          maps targets to numeric labels, and handles class imbalance using SMOTEENN. The preprocessing pipeline is serialized to guarantee identical
+          transformations during inference.
+        </p>
+        <ul class="list">
+          <li>Feature engineering: <code>company_age</code></li>
+          <li>Encoding: OneHot/Label as required</li>
+          <li>Scaling: StandardScaler</li>
+          <li>Imbalance handling: SMOTEENN</li>
+          <li>Outputs: <code>preprocessing.pkl</code>, <code>train.npy</code>, <code>test.npy</code></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TRAINING + EVALUATION -->
+    <section id="training" class="grid">
+      <div class="card">
+        <div class="split">
+          <h2>Model Training</h2>
+          <span class="pill">GridSearchCV • Model Selection</span>
+        </div>
+        <p>
+          The training component fits 2 models and performs hyperparameter tuning via GridSearchCV.
+          The best tuned model is saved as the training output artifact.
+        </p>
+        <ul class="list">
+          <li>Models: Random Forest, KNN</li>
+          <li>Hyperparameter tuning: GridSearchCV</li>
+          <li>Final model artifact: <code>trained_model.pkl</code></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="split">
+          <h2>Model Evaluation</h2>
+          <span class="pill">F1 Score • Baseline Comparison</span>
+        </div>
+        <p>
+          Each training run is evaluated against the current production model. The system uses F1-score to reduce the risk of
+          performance regression, especially under class imbalance. Only models that outperform the baseline are promoted.
+        </p>
+        <ul class="list">
+          <li>If no production model exists → push trained model to production</li>
+          <li>If production exists → compare F1(trained) vs F1(production)</li>
+          <li>Push only when improved → conditional deployment</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- INFERENCE -->
+    <section id="inference" class="card">
+      <div class="split">
+        <h2>Prediction Pipeline (Inference)</h2>
+        <span class="pill">FastAPI • Low Latency</span>
+      </div>
+      <p>
+        The inference layer converts user inputs into a DataFrame, loads the production model (and preprocessing object), and returns a prediction.
+        Inference does not trigger retraining—retraining is explicitly initiated via the training endpoint to keep prediction latency predictable.
+      </p>
+
+      <pre><code># Inference flow
+1) Collect input features (UI / API)
+2) Convert to DataFrame
+3) Load preprocessing.pkl + production model from S3
+4) Transform inputs
+5) Predict → Approved / Denied
+6) Return label + latency( prediction time)</code></pre>
+    </section>
+
+    <!-- CI/CD -->
+
+        <div style="padding: 52.91% 0 0 0; position: relative" id="video">
+          <iframe
+            src="https://player.vimeo.com/video/1161768499?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            "
+          >
+          </iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+
+
+    <footer>
+      <div>© <span id="year"></span> • US Visa Approval Prediction Platform</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+    </footer>
+  </main>
+
+  <script>
+    // Small helper: current year in footer (no dependencies)
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Smooth anchor scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", (e) => {
+        const id = a.getAttribute("href");
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  </script>
 </body>
 </html>
